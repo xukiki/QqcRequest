@@ -12,23 +12,23 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/xukiki/QqcRequest.git", :tag => "#{s.version}" }
   
   s.subspec 'Request' do |ss|
-    ss.source_files = 'QqcRequest/Request/*.{h,m}'
+    ss.source_files = 'Request/*.{h,m}'
   end
 
   s.subspec 'Common' do |ss|
-    ss.source_files = 'QqcRequest/Common/*.{h,m}'
+    ss.source_files = 'Common/*.{h,m}'
   end
 
   s.subspec 'ActionProcessor' do |ss|
-    ss.source_files = 'QqcRequest/ActionProcessor/*.{h,m}'
+    ss.source_files = 'ActionProcessor/*.{h,m}'
   end
 
   s.subspec 'Model' do |ss|
     ss.subspec 'DataModel' do |sss|
-      sss.source_files = 'QqcRequest/Model/DataModel/*.{h,m}'
+      sss.source_files = 'Model/DataModel/*.{h,m}'
     end
     ss.subspec 'ParamModel' do |sss|
-      sss.source_files = 'QqcRequest/Model/ParamModel/*.{h,m}'
+      sss.source_files = 'Model/ParamModel/*.{h,m}'
     end
   end
 
