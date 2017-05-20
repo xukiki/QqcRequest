@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
 
   s.name         = "QqcRequest"
-  s.version      = "1.0.12"
+  s.version      = "1.0.14"
   s.summary      = "QqcRequest"
   s.homepage     = "https://github.com/xukiki/QqcRequest"
   s.source       = { :git => "https://github.com/xukiki/QqcRequest.git", :tag => "#{s.version}" }
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
     end
   end
 
-  #s.subspec 'ActionProcessor' do |ss|
+  s.subspec 'ActionProcessor' do |ss|
     ss.source_files = 'QqcRequest/QqcBaseActionProcessor.{h,m}','QqcRequest/QqcGetActionProcessor.{h,m}','QqcRequest/QqcPostActionProcessor.{h,m}'
-  #end
+  end
 
   s.dependency "YTKNetwork"
   s.dependency "QqcBaseModel"
