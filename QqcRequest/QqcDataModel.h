@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "QqcBaseModel.h"
-#import "QqcError.h"
 
 @interface QqcDataModel : QqcBaseModel
 
