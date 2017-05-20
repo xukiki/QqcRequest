@@ -13,22 +13,27 @@ Pod::Spec.new do |s|
   
   s.subspec 'Request' do |ss|
     ss.source_files = 'Request/*.{h,m}'
+    ss.public_header_files = 'Request/*.h'
   end
 
   s.subspec 'Common' do |ss|
     ss.source_files = 'Common/*.{h,m}'
+    ss.public_header_files = 'Common/*.h'
   end
 
   s.subspec 'ActionProcessor' do |ss|
     ss.source_files = 'ActionProcessor/*.{h,m}'
+    ss.public_header_files = 'ActionProcessor/*.h'
   end
 
   s.subspec 'Model' do |ss|
     ss.subspec 'DataModel' do |sss|
       sss.source_files = 'Model/DataModel/*.{h,m}'
+      sss.public_header_files = 'Model/DataModel/*.h'
     end
     ss.subspec 'ParamModel' do |sss|
       sss.source_files = 'Model/ParamModel/*.{h,m}'
+      sss.public_header_files = 'Model/ParamModel/*.h'
     end
   end
 
