@@ -14,10 +14,6 @@
 #import "QqcDataModel.h"
 #import "QqcJsonResultModel.h"
 #import "QqcError.h"
-#import "AFURLRequestSerialization.h"
-#import "QqcLog.h"
-#import "QqcComFuncDef.h"
-#import "Json+Qqc.h"
 
 @interface QqcPrivateRequest : QqcRequest
 
@@ -36,29 +32,29 @@
 {
     QqcRequestMethod method = self.actionProcessor.requestMethod;
     YTKRequestMethod requestMethod;
-
+    
     switch (method)
     {
         case QqcRequestMethodGet:
-            requestMethod = YTKRequestMethodGET;
+            requestMethod = YTKRequestMethodGet;
             break;
         case QqcRequestMethodPost:
-            requestMethod = YTKRequestMethodPOST;
+            requestMethod = YTKRequestMethodPost;
             break;
         case QqcRequestMethodHead:
-            requestMethod = YTKRequestMethodHEAD;
+            requestMethod = YTKRequestMethodHead;
             break;
         case QqcRequestMethodPut:
-            requestMethod = YTKRequestMethodPUT;
+            requestMethod = YTKRequestMethodPut;
             break;
         case QqcRequestMethodDelete:
-            requestMethod = YTKRequestMethodDELETE;
+            requestMethod = YTKRequestMethodDelete;
             break;
         case QqcRequestMethodPatch:
-            requestMethod = YTKRequestMethodPATCH;
+            requestMethod = YTKRequestMethodPatch;
             break;
         default:
-            requestMethod = YTKRequestMethodGET;
+            requestMethod = YTKRequestMethodGet;
             break;
     }
     
@@ -104,6 +100,7 @@
         return ^(id<AFMultipartFormData> formData) {
             
             [formData appendPartWithFileData:self.actionProcessor.postFileParam.formdata name:self.actionProcessor.postFileParam.name fileName:self.actionProcessor.postFileParam.filename mimeType:self.actionProcessor.postFileParam.mimeType];
+
         };
     }
 }
@@ -298,7 +295,7 @@
 {
     if (_request && _request.isExecuting)
     {
-        [[YTKNetworkAgent sharedAgent] cancelRequest:_request];
+        [[YTKNetworkAgent sharedInstance] cancelRequest:_request];
     }
     
     self.error = nil;
