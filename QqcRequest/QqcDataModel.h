@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QqcBaseModel.h"
 
 @interface QqcDataModel : QqcBaseModel
 
