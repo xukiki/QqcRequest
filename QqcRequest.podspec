@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.requires_arc  = true
 
   s.name         = "QqcRequest"
-  s.version      = "1.0.24"
+  s.version      = "1.0.26"
   s.summary      = "QqcRequest"
   s.homepage     = "https://github.com/xukiki/QqcRequest"
   s.source       = { :git => "https://github.com/xukiki/QqcRequest.git", :tag => "#{s.version}" }
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  ss.public_header_files = 'QqcRequest/QqcBaseActionProcessor.h','QqcRequest/QqcGetActionProcessor.h','QqcRequest/QqcPostActionProcessor.h'
   #end
 
-  s.dependency "YTKNetwork", '~>1.0.24'
+  s.dependency "YTKNetwork", '~>1.3.0'
   s.dependency "QqcBaseModel"
   s.dependency "QqcLog"
   s.dependency "QqcComFuncDef"
