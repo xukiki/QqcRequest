@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  ss.public_header_files = 'QqcRequest/QqcBaseActionProcessor.h','QqcRequest/QqcGetActionProcessor.h','QqcRequest/QqcPostActionProcessor.h'
   #end
 
-  s.dependency "YTKNetwork", '~>1.3.0'
+  s.dependency "YTKNetwork", "~>1.3.0"
   s.dependency "QqcBaseModel"
   s.dependency "QqcLog"
   s.dependency "QqcComFuncDef"
