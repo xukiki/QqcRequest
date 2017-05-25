@@ -14,6 +14,9 @@
 #import "QqcDataModel.h"
 #import "QqcJsonResultModel.h"
 #import "QqcError.h"
+#import "QqcLog.h"
+#import "Json+Qqc.h"
+#import "QqcComFuncDef.h"
 
 @interface QqcPrivateRequest : QqcRequest
 
