@@ -17,6 +17,7 @@
 #import "QqcLog.h"
 #import "Json+Qqc.h"
 #import "QqcComFuncDef.h"
+#import "AFURLRequestSerialization.h"
 
 @interface QqcPrivateRequest : QqcRequest
 
@@ -39,25 +40,25 @@
     switch (method)
     {
         case QqcRequestMethodGet:
-            requestMethod = YTKRequestMethodGet;
+            requestMethod = YTKRequestMethodGET;
             break;
         case QqcRequestMethodPost:
-            requestMethod = YTKRequestMethodPost;
+            requestMethod = YTKRequestMethodPOST;
             break;
         case QqcRequestMethodHead:
-            requestMethod = YTKRequestMethodHead;
+            requestMethod = YTKRequestMethodHEAD;
             break;
         case QqcRequestMethodPut:
-            requestMethod = YTKRequestMethodPut;
+            requestMethod = YTKRequestMethodPUT;
             break;
         case QqcRequestMethodDelete:
-            requestMethod = YTKRequestMethodDelete;
+            requestMethod = YTKRequestMethodDELETE;
             break;
         case QqcRequestMethodPatch:
-            requestMethod = YTKRequestMethodPatch;
+            requestMethod = YTKRequestMethodPATCH;
             break;
         default:
-            requestMethod = YTKRequestMethodGet;
+            requestMethod = YTKRequestMethodGET;
             break;
     }
     
@@ -92,6 +93,7 @@
     
     return dic;
 }
+
 
 - (AFConstructingBlock)constructingBodyBlock
 {
@@ -298,7 +300,7 @@
 {
     if (_request && _request.isExecuting)
     {
-        [[YTKNetworkAgent sharedInstance] cancelRequest:_request];
+        [[YTKNetworkAgent sharedAgent] cancelRequest:_request];
     }
     
     self.error = nil;
