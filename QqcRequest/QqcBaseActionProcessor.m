@@ -310,9 +310,9 @@
     //先调用子类自解析函数
     if ([self customParseResponseData:request.responseString])
     {
-        if (!self.responseObject) {
-            self.responseObject = request.responseString;
-        }
+//        if (!self.responseObject) {
+//            self.responseObject = request.responseString;
+//        }
         [self retSuccess];
     }
     else
